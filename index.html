@@ -1,21 +1,253 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather Dashboard</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   
+
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body text-center bg-dark text-white">
+                <h1>Find Out The Weather!</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card-body text-center">
+
+                        <div class="card" style="width: 22rem;">
+                            <div class="card-body bg-light">
+                                <h6 class="card-subtitle mb-3">Enter A City</h6>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control cityIn" placeholder="City...">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary bg-primary searchButton" type="button"
+                                            id="button-addon2"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+
+                                <ul class="list-group">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col mt-4 mr-5">
+                    <div class="card currentCard pb-2 pt-1">
+                        <h5 class="card-title mt-2 text-center">Todays Weather</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-4">
+                        <div class="card pb-5 fiveDayCard pl-5">
+                          <h5 class="card-title mt-2 mr-5 text-center">5-Day Forecast </h5>
+                            <div class="row">
+                                <div class="col fiveDay">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d3bce829f3.js" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/9d81a6c29e.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body>
+  <form>
+    Search for a City:<br>
+    <row>
+      <input id="cityName" type="text" name="city" value="Kalamazoo">
+      <i id="searchBtn" class="fas fa-search btn btn-primary"></i>
+    </row>
+  </form>
+  <row>
+    <container class="jumbotronWrap">
+      <div id="today" class="jumbotron">
+        <h2 class="city today"></h2><br>
+        <i id="todayWeather"></i><br>
+        <p class="today">Temperature: </p>
+        <p class="temp today"></p>
+        <p class="today">℉</p><br>
+        <p class="today">Humidity: </p>
+        <p class="humidity today"></p>
+        <p class="today">%</p><br>
+        <p class="today">Wind Speed: </p>
+        <p class="wind today"></p>
+        <p class="today"> MPH</p><br>
+        <p class="today">UV Index: </p>
+        <p class="UV today"></p>
+      </div>
+    </container>
+  </row>
+  <container id="cities">
+
+  </container>
+  <row>
+
+    <container id="cards">
+        
+    <div id="card1" class="d-inline card-column" style="width: 14rem;">
+      <div class="card-body">
+        <h5 id="day1" class="card-title"></h5>
+        <i id="day1Weather"></i><div class="col-sm-6"><br>
+        <p>Temperature: </p>
+        <p id="day1Temp"></p>
+        <p>℉</p><br>
+        <p>Humidity: </p>
+        <p id="day1Hum"></p>
+        <p>%</p>
+      </div>
+    </div>  <br>
+
+
+    <div id="card2" class="d-inline card-column" style="width: 14rem;">
+      <div class="card-body">
+        <h5 id="day2" class="card-title"></h5>
+        <i id="day2Weather"></i><br>
+        <p>Temperature: </p>
+        <p id="day2Temp"></p>
+        <p>℉</p><br>
+        <p>Humidity: </p>
+        <p id="day2Hum"></p>
+        <p>%</p>
+      </div>
+    </div>
+
+
+    <div id="card3" class="d-inline card-column" style="width: 14rem;">
+      <div class="card-body">
+        <h5 id="day3" class="card-title"></h5>
+        <i id="day3Weather"></i><br>
+        <p>Temperature: </p>
+        <p id="day3Temp"></p>
+        <p>℉</p><br>
+        <p>Humidity: </p>
+        <p id="day3Hum"></p>
+        <p>%</p>
+      </div>
+    </div>
+    <div id="card4" class="d-inline card-column" style="width: 14rem;">
+      <div class="card-body">
+        <h5 id="day4" class="card-title"></h5>
+        <i id="day4Weather"></i><br>
+        <p>Temperature: </p>
+        <p id="day4Temp"></p>
+        <p>℉</p><br>
+        <p>Humidity: </p>
+        <p id="day4Hum"></p>
+        <p>%</p>
+      </div>
+    </div>
+    <div id="card5" class="d-inline card-column" style="width: 14rem;">
+      <div class="card-body">
+        <h5 id="day5" class="card-title"></h5>
+        <i id="day5Weather"></i><br>
+        <p>Temperature: </p>
+        <p id="day5Temp"></p>
+        <p>℉</p><br>
+        <p>Humidity: </p>
+        <p id="day5Hum"></p>
+        <p>%</p>
+      </div>
+    </container>
+  </row>
+
+</body>
+
+</html> -->

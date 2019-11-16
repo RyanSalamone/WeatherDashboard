@@ -1,0 +1,78 @@
+
+.forecastColor {
+    padding: 20px;
+    background-color:rgb(53, 137, 216);
+    color: white;
+    float: left;
+    margin: 5px;
+    border: 5px solid lightgray;
+
+}
+
+li {
+    border-bottom: 1px solid lightgray;
+    text-align: left;
+    padding-left: 10px;
+}
+.card-title {
+    font-size: 20px;
+    font-display: bold;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* form {
+text-align:center;
+font-size: 40px ;
+
+
+}
+p {
+    display: inline;
+}
+.card-body{
+    background-color: #007bff;
+    color: white;
+}
+
+#today{
+    position: relative;
+    height: 400px;
+    width: 350px;
+    top: 25%;
+    float: left;
+    left: 30%;
+}
+.card{
+    width: 250px;
+    border: 1px solid white;
+    
+}
+.card-body{
+    float: left;
+    width: 13%;padding-right: 10px;
+}
+#cards{
+    position: relative;
+    top: 300px;
+    margin-top: 10px;
+} */
