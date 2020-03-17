@@ -7,7 +7,7 @@ https://ryansalamone.github.io/WeatherDashboard/
 A weather dashboard application with search functionality to find current weather conditions and the future weather outlook for multiple cities. 
 
 
-![Alt text](Weather Dashboard.png "Optional Title")
+![Alt text](WeatherDashboard.png "Optional Title")
 
 
 # User Story
